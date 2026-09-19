@@ -5,67 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Support — Doodle Sudoku</title>
     <meta name="description" content="Support contact for Doodle Sudoku." />
+    <link rel="icon" type="image/png" href="../assets/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/app-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      :root {
-        --ink: #1c1917;
-        --muted: #57534e;
-        --paper: #fffaf3;
-        --accent-soft: #e0f2fe;
-      }
-      body {
-        margin: 0;
-        font-family: "DM Sans", system-ui, sans-serif;
-        color: var(--ink);
-        background:
-          radial-gradient(circle at 80% 10%, #ecfccb 0, transparent 40%),
-          var(--paper);
-        line-height: 1.65;
-      }
-      .wrap {
-        max-width: 36rem;
-        margin: 0 auto;
-        padding: 2.5rem 1.25rem 4rem;
-      }
-      h1 {
-        font-family: Fraunces, Georgia, serif;
-        font-size: 2.25rem;
-        margin: 0 0 0.75rem;
-      }
-      .card {
-        background: #fff;
-        border: 2px solid #e7e5e4;
-        border-radius: 1.25rem;
-        padding: 1.5rem;
-        box-shadow: 4px 4px 0 rgba(28, 25, 23, 0.06);
-      }
-      a {
-        color: #0369a1;
-        font-weight: 600;
-      }
-      .btn {
-        display: inline-block;
-        margin-top: 1rem;
-        background: var(--accent-soft);
-        border: 2px solid #7dd3fc;
-        border-radius: 999px;
-        padding: 0.65rem 1.1rem;
-        text-decoration: none;
-        color: #0c4a6e;
-      }
-      .links {
-        margin-top: 1.5rem;
-      }
-    </style>
+    <link rel="stylesheet" href="../assets/shared.css" />
   </head>
   <body>
+    <div class="floaters" aria-hidden="true">
+      <span class="icon icon-sparkle a"></span>
+      <span class="icon icon-confetti b"></span>
+      <span class="icon icon-bulb c"></span>
+      <span class="icon icon-streak d"></span>
+    </div>
+
     <main class="wrap">
-      <h1>Support</h1>
+      <div class="brand">
+        <img src="../assets/app-icon.png" width="72" height="72" alt="Doodle Sudoku app icon" />
+        <div class="brand-text">
+          <div class="brand-name">Doodle Sudoku</div>
+          <div class="brand-tag">Hand-drawn. Hints that teach.</div>
+        </div>
+      </div>
+
+      <span class="eyebrow"><span class="icon icon-bell"></span> Support</span>
+      <h1>We’re here to help</h1>
       <div class="card">
         <p>
           Need help with Doodle Sudoku — gameplay, Pro, restores, or privacy?
@@ -80,14 +48,19 @@
         <a
           class="btn"
           href="mailto:bduyng@gmail.com?subject=Doodle%20Sudoku%20Support"
-          >Write a message</a
+          ><span class="icon icon-pencil"></span> Write a message</a
         >
       </div>
-      <p class="links">
-        <a href="../privacy/">Privacy Policy</a>
-        ·
-        <a href="../">Home</a>
-      </p>
+      <div class="links">
+        <a class="primary" href="../privacy/"
+          ><span class="icon icon-info"></span> Privacy Policy</a
+        >
+        <a href="../"><span class="icon icon-play"></span> Home</a>
+      </div>
+      <footer>
+        <span class="icon icon-heart"></span>
+        © 2026 Duy Bao Nguyen · Doodle Sudoku
+      </footer>
     </main>
   </body>
 </html>
