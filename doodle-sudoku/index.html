@@ -8,69 +8,45 @@
       name="description"
       content="Doodle Sudoku — hand-drawn sudoku with smart hints that teach."
     />
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+    <link rel="apple-touch-icon" href="./assets/app-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:opsz,wght@9..144,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        margin: 0;
-        min-height: 100vh;
-        display: grid;
-        place-items: center;
-        font-family: "DM Sans", system-ui, sans-serif;
-        color: #1c1917;
-        background:
-          radial-gradient(circle at 20% 20%, #fef08a 0, transparent 35%),
-          radial-gradient(circle at 80% 10%, #bae6fd 0, transparent 40%),
-          #fffaf3;
-        text-align: center;
-        padding: 2rem;
-      }
-      h1 {
-        font-family: Fraunces, Georgia, serif;
-        font-size: clamp(2.2rem, 6vw, 3.2rem);
-        margin: 0 0 0.5rem;
-      }
-      p {
-        color: #57534e;
-        max-width: 28rem;
-        margin: 0 auto 1.5rem;
-        line-height: 1.6;
-      }
-      nav {
-        display: flex;
-        gap: 0.75rem;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      a {
-        display: inline-block;
-        text-decoration: none;
-        font-weight: 700;
-        color: #1c1917;
-        background: #fff;
-        border: 2px solid #e7e5e4;
-        border-radius: 999px;
-        padding: 0.65rem 1.1rem;
-        box-shadow: 3px 3px 0 rgba(28, 25, 23, 0.08);
-      }
-      a.primary {
-        background: #ecfccb;
-        border-color: #bef264;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/shared.css" />
   </head>
   <body>
-    <div>
-      <h1>Doodle Sudoku</h1>
-      <p>Hand-drawn sudoku with smart hints that teach — playful &amp; colorful.</p>
-      <nav>
-        <a class="primary" href="./privacy/">Privacy Policy</a>
-        <a href="./support/">Support</a>
-      </nav>
+    <div class="floaters" aria-hidden="true">
+      <span class="icon icon-sparkle a"></span>
+      <span class="icon icon-confetti b"></span>
+      <span class="icon icon-bulb c"></span>
+      <span class="icon icon-streak d"></span>
+    </div>
+
+    <div class="hero">
+      <div class="hero-inner">
+        <img
+          class="app-icon"
+          src="./assets/app-icon.png"
+          width="112"
+          height="112"
+          alt="Doodle Sudoku app icon"
+        />
+        <span class="eyebrow" style="margin: 0 auto"
+          ><span class="icon icon-confetti"></span> Puzzle game</span
+        >
+        <h1>Doodle Sudoku</h1>
+        <p>Hand-drawn sudoku with smart hints that teach — playful &amp; colorful.</p>
+        <nav class="links" style="justify-content: center">
+          <a class="primary" href="./privacy/"
+            ><span class="icon icon-info"></span> Privacy Policy</a
+          >
+          <a href="./support/"><span class="icon icon-bell"></span> Support</a>
+        </nav>
+      </div>
     </div>
   </body>
 </html>
