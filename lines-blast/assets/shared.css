@@ -1,0 +1,328 @@
+@font-face {
+  font-family: "Playpen Display";
+  src: url("./playpen-800.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ui";
+  src: url("./ui.ttf") format("truetype");
+  font-display: block;
+}
+
+:root {
+  --ink: #4a2410;
+  --ink-soft: #7a4520;
+  --wood: #e9a85a;
+  --paper: #fde9c4;
+  --paper-edge: #f3c98a;
+  --rim: #6b3410;
+  --red: #f0412b;
+  --red-dark: #a8200f;
+  --gold: #ffc531;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--wood);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Playpen Sans", system-ui, sans-serif;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.65;
+  background: url("./background.webp") center top / cover fixed, var(--wood);
+}
+
+h1,
+h2,
+.brand-name,
+.eyebrow,
+.btn,
+.links a {
+  font-family: "Playpen Display", "Playpen Sans", system-ui, sans-serif;
+  font-weight: 800;
+}
+
+.icon {
+  font-family: "ui", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: -0.12em;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-address-book::before {
+  content: "\e900";
+}
+.icon-bell::before {
+  content: "\e902";
+}
+.icon-check::before {
+  content: "\e904";
+}
+.icon-settings::before {
+  content: "\e909";
+}
+
+.sticker {
+  width: 1.6em;
+  height: 1.6em;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2.25rem 1.25rem 4rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand img {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  border: 3px solid var(--rim);
+  box-shadow: 0 5px 0 var(--rim);
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  line-height: 1.1;
+  color: #fff;
+  -webkit-text-stroke: 5px var(--rim);
+  paint-order: stroke fill;
+}
+
+.brand-tag {
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--red);
+  border: 3px solid var(--red-dark);
+  border-radius: 999px;
+  padding: 0.25rem 0.85rem;
+  box-shadow: 0 3px 0 var(--red-dark);
+  transform: rotate(-2deg);
+}
+
+h1 {
+  font-size: clamp(2.1rem, 6vw, 3rem);
+  line-height: 1.1;
+  margin: 0.9rem 0 0.5rem;
+  color: #fff;
+  -webkit-text-stroke: 8px var(--rim);
+  paint-order: stroke fill;
+}
+
+.meta {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.card {
+  background: linear-gradient(var(--paper), #fbe0b0);
+  border: 4px solid var(--rim);
+  border-radius: 1.4rem;
+  padding: 1.6rem 1.4rem;
+  box-shadow:
+    inset 0 0 0 4px var(--paper-edge),
+    0 7px 0 var(--rim);
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  margin: 1.8rem 0 0.5rem;
+  color: var(--ink);
+}
+
+h2:first-of-type {
+  margin-top: 1.2rem;
+}
+
+p,
+li {
+  font-weight: 500;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+li::marker {
+  color: var(--red);
+}
+
+a {
+  color: var(--red-dark);
+  font-weight: 700;
+}
+
+.links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1.6rem;
+}
+
+.links a,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--paper);
+  border: 3px solid var(--rim);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 0 var(--rim);
+  transition: transform 80ms ease, box-shadow 80ms ease;
+}
+
+.links a.primary,
+.btn {
+  color: #fff;
+  background: linear-gradient(#ff6b4f, var(--red));
+  border-color: var(--red-dark);
+  box-shadow: 0 4px 0 var(--red-dark);
+}
+
+.links a:active,
+.btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 var(--rim);
+}
+
+.btn {
+  margin-top: 0.75rem;
+  font-size: 1.05rem;
+  padding: 0.7rem 1.3rem;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.hero-card {
+  max-width: 26rem;
+  padding: 3.5rem 2rem 3rem;
+  background: url("./popup.webp") center / 100% 100% no-repeat;
+}
+
+.hero .app-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 28px;
+  border: 4px solid var(--rim);
+  box-shadow: 0 6px 0 var(--rim);
+}
+
+.hero h1 {
+  margin: 0.9rem 0 0.4rem;
+}
+
+.hero p {
+  margin: 0 auto 0.5rem;
+  font-weight: 700;
+}
+
+.hero .links {
+  justify-content: center;
+}
+
+.balls {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.balls img {
+  position: absolute;
+  width: 72px;
+  opacity: 0.9;
+  filter: drop-shadow(0 6px 6px rgba(74, 36, 16, 0.25));
+}
+.balls .a {
+  top: 7%;
+  left: 5%;
+  transform: rotate(-14deg);
+}
+.balls .b {
+  top: 16%;
+  right: 6%;
+  width: 56px;
+  transform: rotate(12deg);
+}
+.balls .c {
+  bottom: 12%;
+  left: 8%;
+  width: 60px;
+}
+.balls .d {
+  bottom: 8%;
+  right: 9%;
+  transform: rotate(-8deg);
+}
+
+@media (max-width: 640px) {
+  .balls img {
+    width: 44px;
+    opacity: 0.6;
+  }
+}
